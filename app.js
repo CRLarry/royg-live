@@ -1,4 +1,4 @@
-var app = angular.module('flapperNews', []);
+var app = angular.module('ROYG-Live', []);
 
 app.controller('MainCtrl', [
 '$scope',
