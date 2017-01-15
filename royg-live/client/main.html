@@ -1,0 +1,58 @@
+
+{{#if page == "register"}}
+<head>
+  <title>ArtShare Registration</title>
+</head>
+<body>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <div class = "backdrop">
+    <div class = "logo"></div>
+    <div class = "register">
+      <form name = "registerform" method = "post" action = "registeruser" class = "registerform">
+        <h1>Register for ArtShare</h1>
+        <input type = "email" name = "email" placeholder = "Email"/>
+        <input type = "username" name = "username" placeholder = "Username"/>
+        <input type = "password" name = "password" placeholder = "Password"/>
+        <input type = "password" name = "confirm" placeholder = "Confirm Password"/>
+        <button class = "submit" onclick = "check(this.form)">Register</button>
+        <p class = "passwordmatch"></p>
+      </form>
+    </div>
+    <div class = "logintransfer">
+      <p style = "color: white; display: inline"><nobr>Already have an account? </nobr></p>
+      <a href="/login" style = "display: inline; color: white">Login</a>
+    </div>
+    <div class = "userlist">
+      <a href="/userlist" style = "color: white">See userlist</a>
+    </div>
+  </div>
+  <script src = "/javascripts/colorswap.js"></script>
+  <script src = "/javascripts/passwordmismatch.js"></script>
+</body>
+
+{{#elseif page == "login"}}
+<head>
+  <title>ROYGLive Login</title>
+</head>
+<body>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <div class = "backdrop">
+    <div class = "logo"></div>
+    <div class = "login">
+      <form name = "loginform" method = "post" action = "loginuser" class = "loginform">
+        <h1>Login to ROYGLive</h1>
+        <input type = "username" name = "username" placeholder = "Username"/>
+        <input type = "password" name = "password" placeholder = "Password"/>
+        <button class = "submit">Login</button>
+      </form>
+    </div>
+    <div class = "registertransfer">
+      <p style = "color: white; display: inline"><nobr>Don't have an account yet? </nobr></p>
+      <a href="/" style = "display: inline; color: white">Register</a>
+    </div>
+    <div class = "userlist">
+      <a href="/userlist" style = "color: white">See userlist</a>
+    </div>
+  </div>
+  <script src = "/javascripts/colorswap.js"></script>
+</body>
